@@ -14,15 +14,15 @@
 
 ## Core Features
 
-| Feature | My Config | Vanilla Neovim | VSCode | NvChad Base |
-| :--- | :--- | :--- | :--- | :--- |
-| **Theme & UI** | Flexoki & Nvdash | None | Various | Catppuccin |
-| **Performance** | Blazing Fast | Fast | Heavy (~3s+) | Fast |
-| **Smooth UX** | Smear Cursor UI | Basic CLI | Smooth Caret | Basic |
-| **Auto-Format** | Conform (format-on-save) | Manual Setup | Format on Save | Conform (manual) |
-| **OS Integration** | Windows Zero-Profile | Cross-Platform | Native | Cross-Platform |
-| **Rust Parsing** | Tuned rust-analyzer | Basic LSP | rust-analyzer | Basic LSP |
-| **Dart / Flutter** | Native Widget Guides | None | Flutter Ext. | None |
+| Feature | My Config | Vanilla Neovim | NvChad Base |
+| :--- | :--- | :--- | :--- |
+| **Theme & UI** | Flexoki & Nvdash | None | Catppuccin |
+| **Performance** | Blazing Fast | Fast | Fast |
+| **Smooth UX** | Smear Cursor UI | Basic CLI | Basic |
+| **Auto-Format** | Conform (format-on-save) | Manual Setup | Conform (manual) |
+| **OS Integration** | Windows Zero-Profile | Cross-Platform | Cross-Platform |
+| **Rust Parsing** | Tuned rust-analyzer | Basic LSP | Basic LSP |
+| **Dart / Flutter** | Native Widget Guides | None | None |
 
 ### Language Mastery
 
