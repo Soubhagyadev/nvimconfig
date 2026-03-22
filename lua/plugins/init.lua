@@ -188,4 +188,11 @@ return {
       return conf
     end,
   },
+
+  -- 12. Comment.nvim (Better block commenting)
+  {
+    "numToStr/Comment.nvim",
+    opts = {},
+    lazy = false,
+  },
 }

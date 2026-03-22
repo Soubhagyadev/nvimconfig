@@ -20,6 +20,7 @@
 | **Performance** | Blazing Fast | Fast | Fast |
 | **Smooth UX** | Smear Cursor UI | Basic CLI | Basic |
 | **Auto-Format** | Conform (format-on-save) | Manual Setup | Conform (manual) |
+| **Commenting** | `Comment.nvim` (Block `gb`) | Native `gc` | Native `gc` |
 | **OS Integration** | Windows Zero-Profile | Cross-Platform | Cross-Platform |
 | **Rust Parsing** | Tuned rust-analyzer | Basic LSP | Basic LSP |
 | **Dart / Flutter** | Native Widget Guides | None | None |
