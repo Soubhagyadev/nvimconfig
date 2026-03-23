@@ -6,6 +6,7 @@ local map = vim.keymap.set
 -- Quick command mode access
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
+map("i", "kj", "<ESC>")
 map("i", ";;", "\\", { desc = "Insert backslash" })
 
 -- Your custom inverted movements (j=up, k=down)
