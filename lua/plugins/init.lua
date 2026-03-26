@@ -81,7 +81,6 @@ return {
     ft = "dart", -- Optimize: Only load this heavy plugin when opening a Dart file
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim",  -- Better UI for selections
     },
     config = function()
       local nvlsp = require "nvchad.configs.lspconfig"
@@ -194,5 +193,11 @@ return {
     "numToStr/Comment.nvim",
     opts = {},
     lazy = false,
+  },
+
+  -- 13. UI Dressing (Beautiful floating input and selection boxes)
+  {
+    "stevearc/dressing.nvim",
+    event = "VeryLazy",
   },
 }
