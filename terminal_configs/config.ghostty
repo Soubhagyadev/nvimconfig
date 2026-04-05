@@ -1,0 +1,58 @@
+# ~/.config/ghostty/config
+# ─────────────────────────────────────────────
+# Font Configuration
+# ─────────────────────────────────────────────
+font-family = CaskaydiaCove Nerd Font
+font-size = 13
+font-style = Regular
+
+# Font features for better ligatures
+font-feature = +calt
+font-feature = +liga
+font-feature = +dlig
+
+# Cell adjustments for better spacing
+adjust-cell-height = 10%
+adjust-cell-width = 0
+
+# ─────────────────────────────────────────────
+# Theme & Appearance
+# ─────────────────────────────────────────────
+theme = TokyoNight
+background-opacity = 0.95
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
+
+# ─────────────────────────────────────────────
+# Window & UI
+# ─────────────────────────────────────────────
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+window-padding-color = extend
+window-decoration = true
+
+# ─────────────────────────────────────────────
+# Neovim Compatibility
+# ─────────────────────────────────────────────
+# Enable true color support
+term = xterm-256color
+
+# Better key handling for Neovim
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+
+# Shell integration (detect auto-detects your shell)
+shell-integration = detect
+shell-integration-features = cursor,sudo,title
+
+# ─────────────────────────────────────────────
+# Performance
+# ─────────────────────────────────────────────
+# Smooth scrolling
+scrollback-limit = 10000
+
+# Better rendering
+macos-titlebar-style = native
