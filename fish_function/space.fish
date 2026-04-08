@@ -86,10 +86,11 @@ function space --description "Show disk usage and top biggest folders"
     echo -e "$bold$white  󰆼  DISK USAGE$reset"
     echo -e "$dim$white  ─────────────────────────────────────────$reset"
 
-    df -h --output=target,used,size,pcent -x tmpfs -x devtmpfs -x efivarfs -x fuseblk 2>/dev/null \
+    df -h --output=source,target,used,size,pcent -x tmpfs -x devtmpfs -x efivarfs -x fuseblk 2>/dev/null \
     | tail -n +2 \
     | grep -v '/run/media' \
-    | while read -l mount used size pct
+    | awk '!seen[$1]++' \
+    | while read -l source mount used size pct
 
         set pct_num (string replace '%' '' $pct)
         set bar (__bar $pct_num)
@@ -112,12 +113,12 @@ function space --description "Show disk usage and top biggest folders"
 
     echo ""
 
-    # ── Top 5 biggest folders in /home ────────────────────────
-    echo -e "$bold$white  󱂵  TOP 5 IN HOME (/home)$reset"
+    # ── Top 5 biggest folders in $HOME ────────────────────────
+    echo -e "$bold$white  󱂵  TOP 5 IN HOME (~)$reset"
     echo -e "$dim$white  ─────────────────────────────────────────$reset"
 
     set rank 1
-    du -sh /home/*/ 2>/dev/null \
+    find "$HOME" -mindepth 1 -maxdepth 1 -type d -exec du -sh {} + 2>/dev/null \
     | sort -rh \
     | head -5 \
     | while read -l size path
@@ -135,12 +136,13 @@ function space --description "Show disk usage and top biggest folders"
                 set medal "$orange 3$reset"
                 set color $orange
             case '*'
-                set medal "$dim$white  $rank$reset"
+                set medal "$dim$white $rank$reset"
                 set color $white
         end
 
-        printf "  %b  $color%-30s$reset  $magenta%s$reset\n" \
-            $medal $folder $size
+        set folder_fmt (printf "%-30s" "$folder")
+        set size_fmt (printf "%6s" "$size")
+        echo -e "  $medal  $color$folder_fmt$reset  $magenta$size_fmt$reset"
 
         set rank (math $rank + 1)
     end
